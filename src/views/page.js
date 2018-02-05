@@ -4,7 +4,8 @@ import {
   row,
   navigation,
   footer,
-  link
+  link,
+  text
 } from 'hyper-style-elements/elements';
 import * as Input from 'hyper-style-elements/elements/input';
 import {
@@ -41,7 +42,7 @@ function viewHeader() {
         null,
         [],
         [
-          link(styles.navBarBrand, [href('/')], 'conduit')
+          link(styles.navBarBrand, [href('/')], text('conduit'))
           // ul(
           //   Styles.NavBarNav,
           //   [],
@@ -65,14 +66,14 @@ function viewFooter(dispatch) {
       null,
       [center(), maxWidth(1140), spacing(10)],
       [
-        link(styles.footerLink, [href('/')], 'conduit'),
+        link(styles.footerLink, [href('/')], text('conduit')),
         row(
           styles.footerAttribution,
           [],
           [
-            'An interactive learning project from ',
-            link(null, [href('https://thinkster.io')], 'Thinkster'),
-            '. Code & design licensed under MIT.'
+            text('An interactive learning project from '),
+            link(null, [href('https://thinkster.io')], text('Thinkster')),
+            text('. Code & design licensed under MIT.')
           ]
         ),
         Input.button(
@@ -84,7 +85,7 @@ function viewFooter(dispatch) {
                 type: 'TOGGLE_THEME'
               })
           },
-          'Toggle theme'
+          text('Toggle theme')
         )
       ]
     )

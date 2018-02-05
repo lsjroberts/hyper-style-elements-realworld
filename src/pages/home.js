@@ -1,4 +1,4 @@
-import { el, column, h1, paragraph } from 'hyper-style-elements/elements';
+import { el, column, h1, paragraph, text } from 'hyper-style-elements/elements';
 import { padding, spacing } from 'hyper-style-elements/elements/attributes';
 
 import styles from '../styles';
@@ -18,8 +18,12 @@ function viewBanner() {
     styles.banner,
     [padding(spacingScale(2))],
     [
-      h1(styles.bannerTitle, [], 'conduit'),
-      paragraph(styles.bannerText, [], ['A place to share your knowledge.'])
+      h1(styles.bannerTitle, [], text('conduit')),
+      paragraph(
+        styles.bannerText,
+        [],
+        [text('A place to share your knowledge.')]
+      )
     ]
   );
 }
