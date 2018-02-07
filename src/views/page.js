@@ -18,7 +18,7 @@ import {
 } from 'hyper-style-elements/elements/attributes';
 
 import styles from '../styles';
-import { spacingScale } from '../scales';
+import { fontScale, spacingScale } from '../scales';
 
 export default function page({ content, dispatch }) {
   return column(
@@ -69,7 +69,7 @@ function viewFooter(dispatch) {
         link(styles.footerLink, [href('/')], text('conduit')),
         row(
           styles.footerAttribution,
-          [],
+          [spacing(fontScale(1))],
           [
             text('An interactive learning project from '),
             link(null, [href('https://thinkster.io')], text('Thinkster')),
